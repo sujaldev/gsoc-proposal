@@ -1,0 +1,111 @@
+% ------------------------------------------------------------------------------------------------------------------- %
+
+My goal with this project is to improve both user experience and developer experience with mitmproxy.\ The
+following is a complete breakdown of my goals with this project along with it's schedule, I have also kept a little
+scope for other ideas that may popup during the project.
+
+% ------------------------------------------------------------------------------------------------------------------- %
+
+\subsection{Week 1 -- \texttt{browser.start} command}
+\label{subsec:week-1}
+
+I will start the project with a relatively easier issue \href{https://github.com/mitmproxy/mitmproxy/issues/5247}{\#
+5247},
+this will implement support for more applications such as the firebox web browser to be launched with mitmproxy
+pre-configured with the \texttt{browser.start} command.
+
+% ------------------------------------------------------------------------------------------------------------------- %
+
+\subsection{Week 2 -- RPM Packaging}
+\label{subsec:week-2}
+
+Implement automated packaging for \texttt{.rpm} based distributions, creating both a stable release and a nightly
+branch with GitHub actions.\ For Red Hat family distributions such as Fedora and CentOS, the quickest way to setup
+distribution would be via Fedora Copr.\ While I'm unfamiliar with adding packages to default fedora repositories,
+I still want to try getting mitmproxy available as a default pacakge.\ I am doing this as one of the first things
+because then over the course of my project I'll be able to spot quirks/bugs with packaging for various
+distributions and fine tune the automated packaging pipeline.
+
+% ------------------------------------------------------------------------------------------------------------------- %
+
+\subsection{Week 3 -- DEB Packaging}
+\label{subsec:week-3}
+
+Add automated packaging for \texttt{.deb} based distributions.\ If I finish the \texttt{.rpm} and \texttt{.deb}
+packaging early then this week I want to work on packaging for either other linux distributions or entirely
+switch focus from linux to freeBSD.\ Having actively maintained packaging for freeBSD would facilitate an idea I
+would like to experiment with, integration of mitmproxy with
+pfSense\footnote{\href{https://www.pfsense.org}{pfsense.org}}.\ This might be a simple and easy way to intercept
+network wide traffic, simply install mitmproxy package on your pfSense router and a certificate on the client.\
+With pfSense, the proxy could also be advertised via DHCP.\
+
+% ------------------------------------------------------------------------------------------------------------------- %
+
+\subsection{Week 4 -- Pre-commit hooks}
+\label{subsec:week-4}
+
+Pre-commit hooks to run various tests instead of GitHub actions could save a lot of time and improve developer
+experience for the good.
+
+% ------------------------------------------------------------------------------------------------------------------- %
+
+\subsection{Week 5 -- Hex Editor}
+\label{subsec:week-5}
+
+Implement a hex editor for binary content.\ \href{https://github.com/mitmproxy/mitmproxy/issues/5231}{\#5231}
+
+% ------------------------------------------------------------------------------------------------------------------- %
+
+\subsection{Week 6 -- Statistics Addon}
+\label{subsec:week-6}
+
+Implement a statistics addon for both mitmproxy and mitmweb, this addon will visualize statistics like how many
+requests to a particular domain or sub-domain in bar charts, pie charts, etc.\
+
+% ------------------------------------------------------------------------------------------------------------------- %
+
+\subsection{Week 7 -- HAR Import/Export}
+\label{subsec:week-7}
+
+Implement import/export for HAR files.\ \href{https://github.com/mitmproxy/mitmproxy/issues/1477}{\#1477}
+
+% ------------------------------------------------------------------------------------------------------------------- %
+
+\subsection{Week 8 -- Browser Integration}
+\label{subsec:week-8}
+
+Implement selenium based integration with chrome and firefox to allow for a group/tree view in both mitmproxy and
+mitmweb based on which browser tab initiated the request, improving user experience.\ Integration like this could
+also unlock other potential features.
+
+% ------------------------------------------------------------------------------------------------------------------- %
+
+\subsection{Week 9 -- Fix Old Bugs}
+\label{subsec:week-9}
+
+\begin{itemize}
+
+    \item Fix \href{https://github.com/mitmproxy/mitmproxy/issues/5369}{\#5369}, forward client offer during TLS
+    ALPN negotiation in reverse proxy mode.\
+
+    \item Fix \href{https://github.com/mitmproxy/mitmproxy/issues/2989}{\#2989}, trailing-dot domains don't work.
+
+\end{itemize}
+
+% ------------------------------------------------------------------------------------------------------------------- %
+
+\subsection{Week 10--11}
+\label{subsec:week-10-11}
+
+These two weeks I want to tackle websocket functionality in mitmproxy such as replay and intercepting.\ I'm not
+as familiar with websockets so I might have to request extending the project deadline.
+
+% ------------------------------------------------------------------------------------------------------------------- %
+
+\subsection{Week 12 -- Wrapping Up/Documentation}
+\label{subsec:week-12}
+
+Ending the project by writing documentation about new features I've implemented, will also try to implement any
+ideas that might have come up during the project this week.\
+
+% ------------------------------------------------------------------------------------------------------------------- %

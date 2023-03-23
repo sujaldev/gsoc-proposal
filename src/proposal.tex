@@ -1,0 +1,203 @@
+%! Author = Sujal Singh
+%! Date = 3/15/23
+
+% Preamble
+\documentclass[11pt]{article}
+
+\title{\textbf{GSoC Proposal to Mitmproxy}}
+\author{
+    \href{https://github.com/sujaldev}{\color{black}Sujal Singh} \\ \href{mailto:gsoc@sujal.dev}
+    {\color{black}\texttt{gsoc@sujal.dev}}
+}
+\date{\hrule}
+
+\pagenumbering{gobble}
+
+
+% Packages
+\usepackage{amsmath}
+\usepackage[letterpaper, total={7.5in, 10in}]{geometry}
+\usepackage{titlesec}
+\usepackage[
+    pdfusetitle,
+    pdfsubject={GSoC Proposal},
+    pdfauthor={Sujal Singh},
+    colorlinks=true,
+    urlcolor=blue,
+]{hyperref}
+
+%% Fonts
+\usepackage[T1]{fontenc}
+\usepackage{mathptmx}
+\usepackage{color}
+\usepackage{biblatex}
+
+
+% Section Title Format
+\titleformat{\section}[hang]{\Large\bfseries}{\thesection.\hspace{0.5em}}{0pt}{}
+
+% Document
+\begin{document}
+    \maketitle
+
+
+    % ------------------------------------------------------------------------------------------------------------------- %
+
+
+    \section*{Background}
+    \label{sec:background}
+    \addcontentsline{toc}{section}{Background}
+    \def\arraystretch{1.6}
+
+    \begin{tabular}{|l|l|}
+        \hline
+        \textbf{Name}     & {Sujal Singh}                                               \\
+        \hline
+        \textbf{Slack}    & {sujaldev}                                                  \\
+        \hline
+        \textbf{Email}    & {\href{mailto:gsoc@sujal.dev}{\color{black}gsoc@sujal.dev}} \\
+        \hline
+        \textbf{Language} & {English}                                                   \\
+        \hline
+    \end{tabular}
+
+
+    \section{Preferred coding languages and experience}
+    \label{sec:preferred-languages}
+
+    My preferred language is python as I've built many projects with it.\ I am also familiar with HTML/CSS/JS.\
+
+
+    % ------------------------------------------------------------------------------------------------------------------- %
+
+
+    \section{Previous usage with mitmproxy, Charles, Fiddler, ZAP, Burp, other Honeynet Project tools, honeypots and
+    HTTP tools in general}
+    \label{sec:previous-usage}
+
+    \begin{itemize}
+        \item I have used burp suite before to test a variety of websites.
+        \item I reverse engineered a website which wouldn't let me open the developer tools with mitmproxy, and
+        converted it into an \href{https://github.com/PlanetVormir/Redskull/}{api}.
+        \item {
+            I used mitmproxy to fix an
+            \href{https://github.com/react-native-video/react-native-video/issues/2899#issuecomment-1291682463}{issue}
+            I faced in a \href{https://github.com/PlanetVormir/BartonTV}{project} related to the
+            previous point.
+        }
+    \end{itemize}
+
+
+    % ------------------------------------------------------------------------------------------------------------------- %
+
+
+    \section{Previous open source development experience}
+    \label{sec:previous-experience}
+
+    The largest project I've built so far is a
+    \href{https://github.com/sujaldev/skylon}{browser rendering engine} from scratch.\ I've built many other projects,
+    mostly alone, but I've also worked collaboratively on a
+    \href{https://github.com/aayush-tripathi/JEEPYQREPLYBOT}{project} with an online friend.\ Other than that, I also
+    try to fix issues in projects that I use.
+
+
+    % ------------------------------------------------------------------------------------------------------------------- %
+
+
+    \section{Current school and specialty/major at the school}
+    \label{sec:educational-background}
+
+    Currently I am not enrolled at any institution, I recently graduated from high school (June 2022) where I opted
+    to study Physics, Chemistry, Mathematics, English and Computer Science.\ After that, I took a gap year to prepare
+    for college entrance examinations, which were held in January 2023, with another attempt in April.
+
+
+    % ------------------------------------------------------------------------------------------------------------------- %
+
+
+    \section{Number of years attended there}
+    \label{sec:how-many-years-have-you-attended-there?}
+
+    I attended this school for 12 years.
+
+
+    % ------------------------------------------------------------------------------------------------------------------- %
+
+
+    \section{City/country of residence this summer}
+    \label{sec:residence}
+
+    New Delhi, India.
+
+
+    % ------------------------------------------------------------------------------------------------------------------- %
+
+
+    \section{Expected time available for this project}
+    \label{sec:availability}
+
+    I'm expecting to have about 5--9 hours a day.
+
+
+    % ------------------------------------------------------------------------------------------------------------------- %
+
+
+    \section{Jobs, summer classes, vacations, exams, and/or other commitments}
+    \label{sec:commitments}
+
+    I might have to go to colleges for the admission procedure on a few days and also college could begin session in
+    August, besides that I don't foresee any commitments.
+
+
+    % ------------------------------------------------------------------------------------------------------------------- %
+
+
+    \section{Participation in any previous Summer of Code project}
+    \label{sec:previous-participation}
+
+    This is my first time applying to any Summer of Code project.
+
+
+    % ------------------------------------------------------------------------------------------------------------------- %
+
+
+    \section{Applications for any other GSoC project}
+    \label{sec:other-applications}
+
+    I have neither applied nor do I intend to apply for any other GSoC projects, mostly because of how hard it is to
+    find a project one is suited to.
+
+
+    % ------------------------------------------------------------------------------------------------------------------- %
+
+
+    \section{URL for resume/CV}
+    \label{sec:resume}
+
+    \href{https://resume.sujal.dev}{resume.sujal.dev}
+
+
+    % ------------------------------------------------------------------------------------------------------------------- %
+
+
+    \section{Personal/blog URLs}
+    \label{sec:personal-urls}
+
+    Me and my sibling recently acquired a home server and a public static IPv4 address, the domain
+    \href{https://sujal.dev}{sujal.dev} points to it.\ While it currently does not host any public services, we plan
+    on hosting host a lot of things (including a blog) post my exams.\ I am also hosting a lot of services on oracle's
+    free servers on \href{https://sujal.tech}{*.sujal.tech}.
+
+
+    % ------------------------------------------------------------------------------------------------------------------- %
+
+
+    \section{Project Plan}
+    \label{sec:project-plan}
+
+    \input{project-plan}
+
+
+    % ------------------------------------------------------------------------------------------------------------------- %
+
+\end{document}
