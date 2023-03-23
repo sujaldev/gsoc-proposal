@@ -2,17 +2,24 @@
 
 My goal with this project is to improve both user experience and developer experience with mitmproxy.\ The
 following is a complete breakdown of my goals with this project along with it's schedule, I have also kept a little
-scope for other ideas that may popup during the project.
+scope for other ideas that may pop up during the project.
 
 % ------------------------------------------------------------------------------------------------------------------- %
 
 \subsection{Week 1 -- \texttt{browser.start} command}
 \label{subsec:week-1}
 
-I will start the project with a relatively easier issue \href{https://github.com/mitmproxy/mitmproxy/issues/5247}{\#
-5247},
+I will start the project with a relatively easier issue
+\href{https://github.com/mitmproxy/mitmproxy/issues/5247}{\#5247},
 this will implement support for more applications such as the firebox web browser to be launched with mitmproxy
-pre-configured with the \texttt{browser.start} command.
+pre-configured with the \texttt{browser.start} command.\ One of the things that could be changed here is to use
+\texttt{\$XDG\_DATA\_DIRS} on linux to detect \texttt{*.desktop} files to find executables paths of both chrome,
+firefox and any other popular browsers by looking for the \texttt{Exec} key in the \texttt{.desktop} files, this
+approach will cover most, if not all, linux distributions and will also cover flatpaks and even AppImages if the user
+has created a desktop entry for it.\ As for configuring firefox to be launched pre-configured with a proxy, a simple
+approach would be to configure the proxy via \texttt{prefs.js} file in the temporary directory being used as the
+profile for firefox, I've also written some quick code to show a demo in action
+\href{https://github.com/sujaldev/mitmproxy/blob/demo-firefox/mitmproxy/addons/browser.py}{here}.
 
 % ------------------------------------------------------------------------------------------------------------------- %
 
@@ -60,7 +67,7 @@ Implement a hex editor for binary content.\ \href{https://github.com/mitmproxy/m
 \label{subsec:week-6}
 
 Implement a statistics addon for both mitmproxy and mitmweb, this addon will visualize statistics like how many
-requests to a particular domain or sub-domain in bar charts, pie charts, etc.\
+requests to a particular domain or subdomain in bar charts, pie charts, etc.\
 
 % ------------------------------------------------------------------------------------------------------------------- %
 
@@ -94,11 +101,11 @@ also unlock other potential features.
 
 % ------------------------------------------------------------------------------------------------------------------- %
 
-\subsection{Week 10--11}
+\subsection{Week 10--11 -- Websockets}
 \label{subsec:week-10-11}
 
 These two weeks I want to tackle websocket functionality in mitmproxy such as replay and intercepting.\ I'm not
-as familiar with websockets so I might have to request extending the project deadline.
+as familiar with websockets, so I might have to request extending the project deadline.
 
 % ------------------------------------------------------------------------------------------------------------------- %
 
